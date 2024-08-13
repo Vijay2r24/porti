@@ -552,10 +552,16 @@
 body {
   font-family: Arial, sans-serif;
   color: #333;
-  line-height: 1.6;
   background-color: #f4f4f4;
   margin: 0;
+height:100%;
+width:100%;
   padding: 0;
+}
+.headding{
+  font-size:2rem;
+  text-align: center;
+  padding: 10px;
 }
 
 /* .hero-section {
@@ -608,27 +614,33 @@ body {
 
 .our_services_section {
   background-color: #fff;
-  padding: 50px 20px;
+  padding:10px;
   text-align: center;
 }
 
 .our_service_heading {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 3.53rem;
 }
+.service_heading {
+  font-size: 3.5rem;
+  margin-bottom: 01px;
+  text-align: center;
+}
+
 
 .color {
   color: #2e3192;
 }
 
 .our_service_para {
-  font-size: 1rem;
+  font-size: 2rem;
   color: #555;
 }
 
 .storyContainer {
   padding: 20px 40px;
   width: 100%;
+  background-color: #fff;
 }
 
 .storySection {
@@ -639,24 +651,23 @@ body {
 }
 
 .story_img {
-  width: 100%;
+  max-width:px;
   display: flex;
-  background: linear-gradient(#0F2247, #5E2946);
+  /* background: linear-gradient(#0F2247, #5E2946); */
+  height:200px;
   transition: background 0.8s ease-in-out 1.5s, transform 0.3s ease-in-out;
 }
-
-.story_img:hover {
-  background: linear-gradient(#5E2946, #0F2247);
-  transform: scale(1.05);
-}
-
 .storyimg {
-  width: 50%;
-  border-radius: 12px 200px 12px 200px;
+  width:100%;
+  /* border-top-left-radius:100px;
+  border-bottom-right-radius:100px; */
   object-fit: cover;
-  height: 400px;
+  height:1000px;
 }
-
+img {
+  display: block;
+  transition: transform 0.3s ease-in-out; 
+}
 .storyText {
   width: 50%;
   display: flex;
@@ -668,9 +679,41 @@ body {
 .our-story_para {
   color: white;
   font-size: 1rem;
-  width: 80%;
-  margin-left: 10px;
+  width: 100%;
+  margin-left:500px;
 }
+.our_service_para {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .our_service_para {
+    font-size: 18px;
+    line-height: 1.75;
+    text-align: left;
+    padding: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .our_service_para {
+    font-size: 20px;
+    line-height: 1.75;
+    padding: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .our_service_para {
+    font-size: 24px;
+    line-height: 1.5;
+    padding: 40px;
+  }
+}
+
+
 
 
 
@@ -692,6 +735,10 @@ body {
 @media screen and (max-width: 768px) {
   .storySection {
     flex-direction: column;
+  }
+  .our_service_para {
+    font-size: 0.9rem; /* Slightly smaller font size for mobile */
+    padding: 0 0.5rem; /* Reduce padding on mobile */
   }
 
   .storyText {
@@ -738,6 +785,9 @@ flex-direction: column;
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #2e3192;
+}
+.storyContainer{
+  margin-top:100px;
 }
 
 .our_work_content {
@@ -816,3 +866,273 @@ flex-direction: column;
     width: 100%; /* Full width for smaller screens */
   }
 }
+/* Swiper Box CSS */
+
+/* Container for the boxes */
+.box-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow boxes to wrap to the next line */
+  justify-content: center;
+  padding: 2rem 1rem;
+  background-color: white;
+}
+
+/* Individual box styling */
+.box {
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+  border-radius: 50px;
+  height: 280px;
+  color: white;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  margin: 0.5rem; /* Add margin for spacing */
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+/* Icon container */
+.icon-container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10%;
+  background-color: transparent; /* Ensure the background is transparent */
+}
+
+/* Title and description */
+.content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .box-container{
+      display: flex;
+      flex-direction: column;
+     /* Stack boxes vertically */
+    }
+    .box {
+      max-width:360px;
+    }
+    .swiper-slide {
+      margin-bottom: 1rem; /* Space between slides */
+    }
+  .icon {
+    width: 80%; /* Adjust icon size for smaller screens */
+    height: auto; /* Allow icon height to adjust based on its container */
+  }
+
+  .content h3 {
+    font-size: 1.25rem; /* Adjust font size for smaller screens */
+  }
+
+  .content p {
+    font-size: 0.875rem; /* Adjust font size for smaller screens */
+  }
+}
+/* Assuming you are using Tailwind CSS */
+.service_heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #001f3f; /* Adjust the color to match the theme */
+}
+
+.our_service_para {
+  margin-top: 1rem;
+  color: #4a5568;
+  font-size: 1.300rem;
+}
+
+.storySection {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+.reverse .storySection {
+  flex-direction: row-reverse;
+}
+
+.story_img {
+  flex: 1;
+}
+
+.storyText {
+  flex: 1;
+  padding: 1rem;
+}
+
+.our-story_para {
+  display: flex;
+  align-items: center;
+  font-size: 1.300rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.headding {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.storyContainer {
+  padding: 20px;
+}
+
+.service_heading {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.our_service_para {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.storySection {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.story_img {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+.storyimg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.storyText {
+  flex: 1;
+  padding: 20px;
+}
+
+.headding {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.our-story_para {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 1024px) {
+  .storyContainer {
+    padding: 15px;
+  }
+
+  .service_heading {
+    font-size: 2rem;
+  }
+
+  .storySection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story_img {
+    margin-bottom: 20px;
+  }
+
+  .storyText {
+    padding: 10px 0;
+  }
+
+  .headding {
+    font-size: 1.75rem;
+  }
+
+  .our-story_para {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service_heading {
+    font-size: 1.75rem;
+  }
+
+  .our_service_para {
+    font-size: 1rem;
+  }
+
+  .headding {
+    font-size: 1.5rem;
+  }
+
+  .our-story_para {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .storySection {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0;
+  }
+
+  .storyText {
+    order: 1;
+    padding: 0;
+  }
+
+  .story_img {
+    order: 2;
+    margin-bottom: 20px;
+  }
+
+  .reverse .storyText {
+    order: 3;
+  }
+
+  .reverse .story_img {
+    order: 4;
+  }
+
+  .service_heading {
+    font-size: 1.5rem;
+  }
+
+  .our_service_para {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .headding {
+    font-size: 1.25rem;
+  }
+
+  .our-story_para {
+    font-size: 0.8rem;
+  }
+}
+
+
