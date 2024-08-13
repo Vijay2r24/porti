@@ -1338,7 +1338,7 @@ const Portfolio = () => {
   </p>
 
   <div className="storySection flex flex-col-reverse md:flex-row-reverse bg-gray-100 p-6 rounded-lg shadow-md" data-aos="fade-right">
-  <div className="story_img w-full md:w-1/2 h-64 md:h-full">
+  <div className="story_img w-full md:w-1/2 h-100 md:h-full">
     <img
       src={MCDMF}
       alt="MCDMF"
