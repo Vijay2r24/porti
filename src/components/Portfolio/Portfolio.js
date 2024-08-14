@@ -1214,6 +1214,8 @@ import Focify from '../../assets/logo/focify.png';
 import Sustaine from '../../assets/logo/sustaine.png';
 import { GoArrowRight } from "react-icons/go";
 import Real from '../../assets/images/realstate.png';
+import 'aos/dist/aos.css';
+
 
 const Portfolio = () => {
   useEffect(() => {
@@ -1226,6 +1228,51 @@ const Portfolio = () => {
       behavior: "smooth",
     });
   };
+  const services = [
+    {
+      title: 'Web Development',
+      description: ['Web Designing', 'e-Commerce website', 'Dynamic website'],
+      icon: '🌐',
+      bgColor: 'bg-blue-600',
+      textColor: 'text-white',
+    },
+    {
+      title: 'CMS Development',
+      description: ['e-Commerce website', 'Content management system', 'Customer relationship management'],
+      icon: '📱',
+      bgColor: 'bg-gray-900',
+      textColor: 'text-white',
+    },
+    {
+      title: 'App Development',
+      description: ['Android App\'s', 'Hybrid App\'s', 'Progressive Web App\'s'],
+      icon: '📱',
+      bgColor: 'bg-blue-600',
+      textColor: 'text-white',
+    },
+    {
+      title: 'Digital Marketing',
+      description: ['SEO (Search Engine Optimization)', 'SMM (Social media marketing)', 'Branding'],
+      icon: '📊',
+      bgColor: 'bg-white',
+      textColor: 'text-black',
+    },
+    {
+      title: 'UI/UX',
+      description: ['Mobile App & Web UI/UX Design', 'User Research', 'UX Enhancements'],
+      icon: '🎨',
+      bgColor: 'bg-blue-600',
+      textColor: 'text-white',
+    },
+    {
+      title: 'Graphic Designing',
+      description: ['Logo Designing', 'Social Media Post Designing', 'Web Banners, Visual Designing'],
+      icon: '🖼️',
+      bgColor: 'bg-white',
+      textColor: 'text-black',
+    },
+  ];
+  
 
   const Box = ({ title, description, icon, bgColor }) => (
     <div className="box" style={{ backgroundColor: bgColor }}>
@@ -1293,7 +1340,7 @@ const Portfolio = () => {
               title="Just Click Service"
               description="Food & Groceries Delivery Services"
               icon={Loud}
-              bgColor="#FF5733"
+              bgColor="#F1F5F9"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -1301,7 +1348,7 @@ const Portfolio = () => {
               title="Yadhumadi"
               description="Farmer & Nature Protection NGO"
               icon={Sustaine}
-              bgColor="#28B463"
+              bgColor="#F1F5F9"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -1309,7 +1356,7 @@ const Portfolio = () => {
               title="Astrology Offline"
               description="Expert Astrologist Website"
               icon={Focify}
-              bgColor="#2C3E50"
+              bgColor="#F1F5F9"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -1317,7 +1364,7 @@ const Portfolio = () => {
               title="New Service"
               description="A new exciting service"
               icon={Geeks}
-              bgColor="#3498DB"
+              bgColor="#F1F5F9"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -1325,18 +1372,17 @@ const Portfolio = () => {
               title="MCDMF"
               description="Expert Astrologist Website"
               icon={Loud}
-              bgColor="#2C3E50"
+              bgColor="#F1F5F9"
             />
           </SwiperSlide>
         </Swiper>
         <div className="storyContainer">
   <h1 className="service_heading" data-aos="fade-up">
-    <span className="color">Our Work</span>
+    <span className="color"><b>Our Work</b></span>
   </h1>
   <p className="our_service_para" data-aos="fade-up" data-aos-delay="100">
     Our team is currently working on a mobile app redesign aimed at improving user experience and integrating new features. We're using React Native for the frontend and Node.js for the backend, with a focus on creating a more intuitive interface and incorporating AI-driven personalization. The project is progressing well, with initial wireframes completed and API integration underway. We're excited to see how these changes will enhance user engagement once the app is launched.
   </p>
-
   <div className="storySection flex flex-col-reverse md:flex-row-reverse bg-gray-100 p-6 rounded-lg shadow-md" data-aos="fade-right">
   <div className="story_img w-full md:w-1/2 h-100 md:h-full">
     <img
@@ -1418,7 +1464,29 @@ const Portfolio = () => {
     </p>
   </div>
 </div>
-
+<div className="storySection flex flex-col-reverse md:flex-row-reverse bg-gray-100 p-6 rounded-lg shadow-md" data-aos="fade-right">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-20 p-6">
+      {services.map((service, index) => (
+        <div
+          key={index}
+          className={`p-6 rounded-xl shadow-md ${service.bgColor} ${service.textColor}`}
+          data-aos="fade-up" // AOS animation
+          data-aos-delay={`${index * 100}`} // AOS delay based on index
+        >
+          <div className="text-4xl mb-4">{service.icon}</div>
+          <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
+          <ul className="space-y-2">
+            {service.description.map((item, idx) => (
+              <li key={idx} className="flex items-center">
+                <span className="mr-2">›</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+      </div>
       </div>
       </div>
     </>

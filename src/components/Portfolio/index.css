@@ -622,7 +622,7 @@ body {
   font-size: 3.53rem;
 }
 .service_heading {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   margin-bottom: 01px;
   text-align: center;
 }
@@ -869,7 +869,7 @@ flex-direction: column;
   display: flex;
   flex-wrap: wrap; /* Allow boxes to wrap to the next line */
   justify-content: center;
-  padding: 2rem 1rem;
+  padding:1rem;
   background-color: white;
 }
 
@@ -1015,7 +1015,7 @@ flex-direction: column;
 
 .storyimg {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   height: auto;
   transition: transform 0.3s ease-in-out;
 }

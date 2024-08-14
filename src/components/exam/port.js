@@ -1,50 +1,72 @@
 import React from 'react';
 
-const PortfolioTemplate = () => {
+const services = [
+  {
+    title: 'Web Development',
+    description: ['Web Designing', 'e-Commerce website', 'Dynamic website'],
+    icon: '🌐',
+    bgColor: 'bg-blue-600',
+    textColor: 'text-white',
+  },
+  {
+    title: 'CMS Development',
+    description: ['e-Commerce website', 'Content management system', 'Customer relationship management'],
+    icon: '📱',
+    bgColor: 'bg-gray-900',
+    textColor: 'text-white',
+  },
+  {
+    title: 'App Development',
+    description: ['Android App\'s', 'Hybrid App\'s', 'Progressive Web App\'s'],
+    icon: '📱',
+    bgColor: 'bg-blue-600',
+    textColor: 'text-white',
+  },
+  {
+    title: 'Digital Marketing',
+    description: ['SEO (Search Engine Optimization)', 'SMM (Social media marketing)', 'Branding'],
+    icon: '📊',
+    bgColor: 'bg-white',
+    textColor: 'text-black',
+  },
+  {
+    title: 'UI/UX',
+    description: ['Mobile App & Web UI/UX Design', 'User Research', 'UX Enhancements'],
+    icon: '🎨',
+    bgColor: 'bg-blue-600',
+    textColor: 'text-white',
+  },
+  {
+    title: 'Graphic Designing',
+    description: ['Logo Designing', 'Social Media Post Designing', 'Web Banners, Visual Designing'],
+    icon: '🖼️',
+    bgColor: 'bg-white',
+    textColor: 'text-black',
+  },
+];
+
+const Services = () => {
   return (
-    <div className="bg-[#12193f] min-h-screen text-white">
-      {/* Header */}
-      <header className="flex justify-between items-center px-8 py-4">
-        <div className="text-2xl font-bold">SUMATOSOFT</div>
-        <nav className="flex space-x-6">
-          <a href="#" className="hover:underline">Services</a>
-          <a href="#" className="hover:underline">Case Studies</a>
-          <a href="#" className="hover:underline">About us</a>
-          <a href="#" className="hover:underline">Insights</a>
-        </nav>
-        <button className="bg-pink-500 px-6 py-2 rounded-md">Get in Touch</button>
-      </header>
-
-      {/* Main Content */}
-      <main className="px-8 py-16 flex flex-col items-center">
-        <div className="text-center max-w-3xl mb-10">
-          <div className="flex justify-center flex-wrap gap-2 mb-6">
-            <span className="bg-gray-800 px-3 py-1 rounded-md">AWS</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-md">Capistrano</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-md">Websockets</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-md">Bluemix IoT</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-md">Nodered</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-md">redis</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-md">Postgre SQL</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-md">Ruby on Rails</span>
-          </div>
-          <h1 className="text-4xl font-bold mb-4">A platform for vital farm animals signs monitoring</h1>
-          <p className="text-lg">The Client develops a technology incorporated in a matchbox-sized wearable device allowing precise measurement of medically relevant vital data of farm animals.</p>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+      {services.map((service, index) => (
+        <div
+          key={index}
+          className={`p-6 rounded-xl shadow-md ${service.bgColor} ${service.textColor}`}
+        >
+          <div className="text-4xl mb-4">{service.icon}</div>
+          <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
+          <ul className="space-y-2">
+            {service.description.map((item, idx) => (
+              <li key={idx} className="flex items-center">
+                <span className="mr-2">›</span>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="w-full max-w-lg">
-          <img src="device-monitoring-image.png" alt="Monitoring device" className="w-full rounded-lg shadow-lg" />
-        </div>
-      </main>
-
-      {/* Footer */}
-      <footer className="px-8 py-4 text-center bg-gray-800">
-        <p className="text-sm">
-          This website uses cookies to improve your website experience and provide more personalized services to you. 
-          <a href="#" className="underline ml-1">Privacy Policy</a>
-        </p>
-      </footer>
+      ))}
     </div>
   );
 };
 
-export default PortfolioTemplate;
+export default Services;
