@@ -876,10 +876,9 @@ flex-direction: column;
 /* Individual box styling */
 .box {
   width: 100%;
-  max-width: 500px;
+  max-width: 260px;
   padding: 1rem;
   border-radius: 50px;
-  height: 280px;
   color: white;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -1035,6 +1034,9 @@ flex-direction: column;
   display: flex;
   align-items: center;
   margin: 10px 0;
+}
+.shadow-lg {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Increased shadow on all four sides */
 }
 
 /* Mobile Responsive Adjustments */

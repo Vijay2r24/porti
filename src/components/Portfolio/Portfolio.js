@@ -1215,8 +1215,19 @@ import Sustaine from '../../assets/logo/sustaine.png';
 import { GoArrowRight } from "react-icons/go";
 import Real from '../../assets/images/realstate.png';
 import 'aos/dist/aos.css';
+import { ChevronRightIcon } from '@heroicons/react/20/solid';
 
-
+const Box = ({ title, description, icon, bgColor }) => (
+  <div className="box" style={{ backgroundColor: bgColor }}>
+    <div className="icon-container">
+      <img src={icon} alt={title} className="icon" />
+    </div>
+    <div className="content">
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </div>
+  </div>
+);
 const Portfolio = () => {
   useEffect(() => {
     AOS.init({ duration: 1200 }); // Initialize AOS animations
@@ -1232,50 +1243,56 @@ const Portfolio = () => {
     {
       title: 'Web Development',
       description: ['Web Designing', 'e-Commerce website', 'Dynamic website'],
-      icon: '🌐',
-      bgColor: 'bg-blue-600',
+      imageUrl: require('../../assets/images/web1.png'),
+      bgimage: require('../../assets/images/curveline.jpg'),
+      bgColor: '#051094',
       textColor: 'text-white',
     },
     {
       title: 'CMS Development',
       description: ['e-Commerce website', 'Content management system', 'Customer relationship management'],
-      icon: '📱',
-      bgColor: 'bg-gray-900',
+      imageUrl: require('../../assets/images/realstateimg1.png'), 
+      bgimage: require('../../assets/images/curveline.jpg'),
+      bgColor: '#160D08',
       textColor: 'text-white',
     },
     {
       title: 'App Development',
       description: ['Android App\'s', 'Hybrid App\'s', 'Progressive Web App\'s'],
-      icon: '📱',
-      bgColor: 'bg-blue-600',
+      imageUrl: require('../../assets/images/mapp1.png'),
+      bgimage: require('../../assets/images/curveline.jpg'), 
+      bgColor: '#051094',
       textColor: 'text-white',
     },
     {
       title: 'Digital Marketing',
       description: ['SEO (Search Engine Optimization)', 'SMM (Social media marketing)', 'Branding'],
-      icon: '📊',
-      bgColor: 'bg-white',
+      imageUrl: require('../../assets/images/social1.png'),
+      bgimage: require('../../assets/images/curveline.jpg'),
+      bgColor: '#FFFF',
       textColor: 'text-black',
     },
     {
       title: 'UI/UX',
       description: ['Mobile App & Web UI/UX Design', 'User Research', 'UX Enhancements'],
-      icon: '🎨',
-      bgColor: 'bg-blue-600',
+      imageUrl: require('../../assets/images/uiux1.png'),
+      bgimage: require('../../assets/images/curveline.jpg'), 
+      bgColor: '#051094',
       textColor: 'text-white',
     },
     {
       title: 'Graphic Designing',
       description: ['Logo Designing', 'Social Media Post Designing', 'Web Banners, Visual Designing'],
-      icon: '🖼️',
-      bgColor: 'bg-white',
+      imageUrl:require('../../assets/images/graphic1.png'),
+      bgimage: require('../../assets/images/curveline.jpg'),
+      bgColor: '#FFFF',
       textColor: 'text-black',
     },
   ];
   
 
   const Box = ({ title, description, icon, bgColor }) => (
-    <div className="box" style={{ backgroundColor: bgColor }}>
+    <div className="box text-white-500" style={{ backgroundColor: bgColor }}>
       <div className="icon-container">
         <img src={icon} alt={title} className="icon" />
       </div>
@@ -1371,7 +1388,7 @@ const Portfolio = () => {
             <Box
               title="MCDMF"
               description="Expert Astrologist Website"
-              icon={Loud}
+              icon={Sustaine}
               bgColor=""
             />
           </SwiperSlide>
@@ -1383,8 +1400,8 @@ const Portfolio = () => {
   <p className="our_service_para" data-aos="fade-up" data-aos-delay="100">
     Our team is currently working on a mobile app redesign aimed at improving user experience and integrating new features. We're using React Native for the frontend and Node.js for the backend, with a focus on creating a more intuitive interface and incorporating AI-driven personalization. The project is progressing well, with initial wireframes completed and API integration underway. We're excited to see how these changes will enhance user engagement once the app is launched.
   </p>
-  <div className="storySection flex flex-col-reverse md:flex-row-reverse bg-gray-100 p-6 rounded-lg shadow-md" data-aos="fade-right">
-  <div className="story_img w-full md:w-1/2 h-100 md:h-full">
+  <div className="storySection flex flex-col md:flex-row" data-aos="fade-right">
+  <div className="story_img w-full md:w-1/2 h-64 md:h-auto">
     <img
       src={MCDMF}
       alt="MCDMF"
@@ -1393,48 +1410,72 @@ const Portfolio = () => {
     />
   </div>
   <div className="storyText w-full md:w-1/2 p-4">
-    <h1 className="headding text-2xl font-bold mb-4" data-aos="fade-right">MCDMF</h1>
-    <div className="flex justify-center flex-wrap gap-2 mb-6">
-      <span className="bg-gray-800 text-white px-3 py-1 rounded-md">React.js</span>
-      <span className="bg-gray-800 text-white px-3 py-1 rounded-md">Node.js</span>
-      <span className="bg-gray-800 text-white px-3 py-1 rounded-md">Websockets</span>
-      <span className="bg-gray-800 text-white px-3 py-1 rounded-md">SQL</span>
-    </div>
-    <p className="our-story_para mb-4" data-aos="fade-left" data-aos-delay="200">
-      <span className="p-2 inline-block"> <GoArrowRight /></span>
-      Currently working with one of the in-house Product development.
+    <h1 className="headding text-2xl font-bold text-white mb-4" data-aos="fade-right">MCDMF</h1>
+    <div className="flex flex-wrap justify-center gap-2 mb-6">
+  <span className="bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200 hover:text-gray-800 transition-colors duration-300 w-auto">
+    React.js
+  </span>
+  <span className="bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200 hover:text-gray-800 transition-colors duration-300 w-auto">
+    Node.js
+  </span>
+  <span className="bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200 hover:text-gray-800 transition-colors duration-300 w-auto">
+    Websockets
+  </span>
+  <span className="bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200 hover:text-gray-800 transition-colors duration-300 w-auto">
+    SQL
+  </span>
+</div>
+    <p className="text-white flex items-start mb-4" data-aos="fade-left" data-aos-delay="200">
+      <span className="text-white mt-1 mr-3 flex-shrink-0 text-sm md:text-base">
+        <GoArrowRight />
+      </span>
+      Currently working with one of the in-MCDMF development teams.
     </p>
-    <p className="our-story_para" data-aos="fade-left" data-aos-delay="400">
-      <span className="p-2 inline-block"> <GoArrowRight /></span>
-      We have done website development for MCDMF successfully and some of other clients.
+    <p className="text-white flex items-start mb-4" data-aos="fade-left" data-aos-delay="400">
+      <span className="text-white mt-1 mr-3 flex-shrink-0 text-sm md:text-base">
+        <GoArrowRight />
+      </span>
+      We have successfully completed website development for MCDMF and other clients.
     </p>
   </div>
 </div>
 <div className="storySection reverse flex flex-col-reverse md:flex-row bg-gray-100 p-6 rounded-lg shadow-md" data-aos="fade-left">
   <div className="storyText w-full md:w-1/2 p-4">
-    <h1 className="headding text-2xl font-bold mb-4" data-aos="fade-right">E-Commerce</h1>
-    <div className="flex justify-center flex-wrap gap-2 mb-6">
-      <span className="bg-gray-800 text-white px-3 py-1 rounded-md">React.js</span>
-      <span className="bg-gray-800 text-white px-3 py-1 rounded-md">Node.js</span>
-      <span className="bg-gray-800 text-white px-3 py-1 rounded-md">Websockets</span>
-      <span className="bg-gray-800 text-white px-3 py-1 rounded-md">SQL</span>
-    </div>
-    <p className="our-story_para mb-4 flex items-center" data-aos="fade-right" data-aos-delay="200">
-      <GoArrowRight className="mr-2" />
+  <h1 className="headding text-2xl font-bold text-white mb-4" data-aos="fade-right">E-Commerce</h1>
+    <div className="flex flex-wrap justify-center gap-2 mb-6">
+  <span className="bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200 hover:text-gray-800 transition-colors duration-300 w-auto">
+    React.js
+  </span>
+  <span className="bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200 hover:text-gray-800 transition-colors duration-300 w-auto">
+    Node.js
+  </span>
+  <span className="bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200 hover:text-gray-800 transition-colors duration-300 w-auto">
+    Websockets
+  </span>
+  <span className="bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200 hover:text-gray-800 transition-colors duration-300 w-auto">
+    SQL
+  </span>
+</div>
+    <p className="text-white flex items-start mb-4" data-aos="fade-left" data-aos-delay="200">
+    <span className="text-white mt-1 mr-3 flex-shrink-0 text-sm md:text-base">
+        <GoArrowRight />
+      </span>
       Have done Inventory Management mobile application for Data Processing Solutions.
     </p>
-    <p className="our-story_para flex items-center" data-aos="fade-right" data-aos-delay="300">
-      <GoArrowRight className="mr-2" />
+    <p className="text-white flex items-start mb-4" data-aos="fade-right" data-aos-delay="300">
+    <span className="text-white mt-1 mr-3 flex-shrink-0 text-sm md:text-base">
+        <GoArrowRight />
+      </span>
       Have implemented E-Commerce website for Tri-Gen Technologies.
     </p>
   </div>
-  <div className="story_img w-full md:w-1/2 h-64 md:h-full">
-    <img
-      src={OurMissionImg2}
-      alt="E-Commerce"
-      className="storyimg transition-transform duration-300 ease-in-out hover:translate-y-5 w-full h-full rounded-lg object-cover"
-    />
-  </div>
+  <div className="story_img relative w-full h-64 md:w-1/2 md:h-full overflow-hidden">
+  <img
+    src={OurMissionImg2}
+    alt="E-Commerce"
+    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out hover:translate-y-5"
+  />
+</div>
 </div>
 
 <div className="storySection flex flex-col-reverse md:flex-row-reverse bg-gray-100 p-6 rounded-lg shadow-md" data-aos="fade-right">
@@ -1447,48 +1488,89 @@ const Portfolio = () => {
     />
   </div>
   <div className="storyText w-full md:w-1/2 p-4">
-    <h1 className="headding text-2xl font-bold mb-4" data-aos="fade-right">Realstate</h1>
-    <div className="flex justify-center flex-wrap gap-2 mb-6">
-      <span className="bg-gray-800 text-white px-3 py-1 rounded-md">React.js</span>
-      <span className="bg-gray-800 text-white px-3 py-1 rounded-md">Node.js</span>
-      <span className="bg-gray-800 text-white px-3 py-1 rounded-md">Websockets</span>
-      <span className="bg-gray-800 text-white px-3 py-1 rounded-md">SQL</span>
-    </div>
-    <p className="our-story_para mb-4" data-aos="fade-left" data-aos-delay="200">
-      <span className="p-2 inline-block"> <GoArrowRight /></span>
+    <h1 className="headding text-2xl font-bold text-white mb-4" data-aos="fade-right">Realstate</h1>
+    <div className="flex flex-wrap justify-center gap-2 mb-6">
+  <span className="bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200 hover:text-gray-800 transition-colors duration-300 w-auto">
+    React.js
+  </span>
+  <span className="bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200 hover:text-gray-800 transition-colors duration-300 w-auto">
+    Node.js
+  </span>
+  <span className="bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200 hover:text-gray-800 transition-colors duration-300 w-auto">
+    Websockets
+  </span>
+  <span className="bg-white text-black px-3 py-1 rounded-md hover:bg-gray-200 hover:text-gray-800 transition-colors duration-300 w-auto">
+    SQL
+  </span>
+</div>
+    <p className="text-white flex items-start mb-4" data-aos="fade-left" data-aos-delay="200">
+    <span className="text-white mt-1 mr-3 flex-shrink-0 text-sm md:text-base">
+        <GoArrowRight />
+      </span>
       Currently working with one of the in-house Product development.
     </p>
-    <p className="our-story_para" data-aos="fade-left" data-aos-delay="400">
-      <span className="p-2 inline-block"> <GoArrowRight /></span>
+    <p className="text-white flex items-start mb-4" data-aos="fade-left" data-aos-delay="400">
+    <span className="text-white mt-1 mr-3 flex-shrink-0 text-sm md:text-base">
+        <GoArrowRight />
+      </span>
       We have done website development for Realstate successfully and some of other clients.
     </p>
   </div>
 </div>
-<div className="storySection flex flex-col-reverse md:flex-row-reverse bg-gray-100 p-6 rounded-lg shadow-md" data-aos="fade-right">
-<div className="grid grid-cols-1 md:grid-cols-3 gap-20 p-6">
-      {services.map((service, index) => (
+<div className="grid grid-cols-1 md:grid-cols-3 gap-10 p-6">
+    {services.map((service, index) => {
+      const isWhiteBg = service.bgColor === '#FFFF'; // Check if the background color is white
+      const textColorClass = isWhiteBg ? 'text-black' : 'text-white'; // Set text color to black if background is white
+
+      return (
         <div
           key={index}
-          className={`p-6 rounded-xl shadow-md ${service.bgColor} ${service.textColor}`}
-          data-aos="fade-up" // AOS animation
-          data-aos-delay={`${index * 100}`} // AOS delay based on index
+          className={`relative p-6 shadow-lg rounded-xl overflow-hidden ${textColorClass}`}
+          style={{ backgroundColor: service.bgColor }}
+          data-aos="fade-up"
+          data-aos-delay={`${index * 100}`}
         >
-          <div className="text-4xl mb-4">{service.icon}</div>
-          <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-          <ul className="space-y-2">
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: `url(${service.bgimage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              opacity: 0.2, // Adjust this opacity to balance image visibility
+            }}
+          ></div>
+          <div
+            className="absolute inset-0 z-10"
+            style={{
+              backgroundColor: service.bgColor,
+              opacity: 0.8, // Increase this opacity to make the background color more dominant
+            }}
+          ></div>
+          <div className="relative z-20 mb-4">
+            <img
+              src={service.imageUrl}
+              alt={service.title}
+              className="w-[13%] border border-gray-400 object-cover" // Adjust image size and border as needed
+            />
+          </div>
+          <h3 className="relative z-20 text-xl font-semibold mb-4">{service.title}</h3>
+          <ul className="relative z-20 space-y-4">
             {service.description.map((item, idx) => (
               <li key={idx} className="flex items-center">
-                <span className="mr-2"></span>
-                {item}
+                <span className="flex-shrink-0 mr-4">
+                  <ChevronRightIcon className="w-6 h-6" />
+                </span>
+                <span className="text-base">{item}</span>
               </li>
             ))}
           </ul>
         </div>
-      ))}
-    </div>
-      </div>
-      </div>
-      </div>
+      );
+    })}
+  </div>
+
+</div>
+</div>
     </>
   );
 };

@@ -16,3 +16,12 @@ body{
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.storySection {
+  @apply p-6 rounded-lg shadow-md flex flex-col-reverse md:flex-row-reverse;
+  background: linear-gradient(#0F2247, #5E2946);
+  transition: background 0.8s ease-in-out 1.5s, transform 0.3s ease-in-out;
+}
+
+.storySection:hover {
+  background: linear-gradient(#5E2946, #0F2247);
+}
