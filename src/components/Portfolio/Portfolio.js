@@ -1469,13 +1469,13 @@ const Portfolio = () => {
       Have implemented E-Commerce website for Tri-Gen Technologies.
     </p>
   </div>
-  <div className="story_img relative w-full h-64 md:w-1/2 md:h-full overflow-hidden">
-  <img
-    src={OurMissionImg2}
-    alt="E-Commerce"
-    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out hover:translate-y-5"
-  />
-</div>
+  <div className="story_img w-full md:w-1/2 h-64 md:h-full">
+    <img
+      src={OurMissionImg2}
+      alt="E-Commerce"
+      className="storyimg transition-transform duration-300 ease-in-out hover:translate-y-5 w-full h-full rounded-lg object-cover"
+    />
+  </div>
 </div>
 
 <div className="storySection flex flex-col-reverse md:flex-row-reverse bg-gray-100 p-6 rounded-lg shadow-md" data-aos="fade-right">
