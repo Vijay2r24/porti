@@ -1340,7 +1340,7 @@ const Portfolio = () => {
               title="Just Click Service"
               description="Food & Groceries Delivery Services"
               icon={Loud}
-              bgColor="#F1F5F9"
+              bgColor=""
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -1348,7 +1348,7 @@ const Portfolio = () => {
               title="Yadhumadi"
               description="Farmer & Nature Protection NGO"
               icon={Sustaine}
-              bgColor="#F1F5F9"
+              bgColor=""
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -1356,7 +1356,7 @@ const Portfolio = () => {
               title="Astrology Offline"
               description="Expert Astrologist Website"
               icon={Focify}
-              bgColor="#F1F5F9"
+              bgColor=""
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -1364,7 +1364,7 @@ const Portfolio = () => {
               title="New Service"
               description="A new exciting service"
               icon={Geeks}
-              bgColor="#F1F5F9"
+              bgColor=""
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -1372,7 +1372,7 @@ const Portfolio = () => {
               title="MCDMF"
               description="Expert Astrologist Website"
               icon={Loud}
-              bgColor="#F1F5F9"
+              bgColor=""
             />
           </SwiperSlide>
         </Swiper>
@@ -1478,7 +1478,7 @@ const Portfolio = () => {
           <ul className="space-y-2">
             {service.description.map((item, idx) => (
               <li key={idx} className="flex items-center">
-                <span className="mr-2">›</span>
+                <span className="mr-2"></span>
                 {item}
               </li>
             ))}
