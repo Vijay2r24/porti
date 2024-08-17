@@ -1423,7 +1423,7 @@ const Portfolio = () => {
   Our team is currently working on a mobile app redesign aimed at improving user experience. We're using React Native for the frontend and Node.js for the backend. The project is progressing well, with initial wireframes completed and API integration underway.
 </p>
 
-  <div className="storySection flex flex-col md:flex-row" data-aos="fade-right">
+  <div className="storySection flex flex-col md:flex-row" data-aos="fade-right" data-aos-delay="100">
   <div className="story_img w-full md:w-1/2 h-64 md:h-auto">
     <img
       src={MCDMF}
@@ -1454,7 +1454,7 @@ const Portfolio = () => {
       </span>
       Currently working with one of the in-MCDMF development teams.
     </p>
-    <p className="text-white flex items-start mb-4" data-aos="fade-left" data-aos-delay="400">
+    <p className="text-white flex items-start mb-4" data-aos="fade-left" data-aos-delay="200">
       <span className="text-white mt-1 mr-3 flex-shrink-0 text-sm md:text-base">
         <GoArrowRight />
       </span>
@@ -1462,7 +1462,7 @@ const Portfolio = () => {
     </p>
   </div>
 </div>
-<div className="storySection reverse flex flex-col-reverse md:flex-row bg-gray-100 p-6 rounded-lg shadow-md" data-aos="fade-left">
+<div className="storySection reverse flex flex-col-reverse md:flex-row bg-gray-100 p-6 rounded-lg shadow-md" data-aos="fade-left" data-aos-delay="100">
   <div className="storyText w-full md:w-1/2 p-4">
   <h1 className="headding text-2xl font-bold text-white mb-4" data-aos="fade-right">E-Commerce</h1>
     <div className="flex flex-wrap justify-center gap-2 mb-6">
@@ -1485,7 +1485,7 @@ const Portfolio = () => {
       </span>
       Have done Inventory Management mobile application for Data Processing Solutions.
     </p>
-    <p className="text-white flex items-start mb-4" data-aos="fade-right" data-aos-delay="300">
+    <p className="text-white flex items-start mb-4" data-aos="fade-right" data-aos-delay="200">
     <span className="text-white mt-1 mr-3 flex-shrink-0 text-sm md:text-base">
         <GoArrowRight />
       </span>
@@ -1501,7 +1501,7 @@ const Portfolio = () => {
   </div>
 </div>
 
-<div className="storySection flex flex-col-reverse md:flex-row-reverse bg-gray-100 p-6 rounded-lg shadow-md" data-aos="fade-right">
+<div className="storySection flex flex-col-reverse md:flex-row-reverse bg-gray-100 p-6 rounded-lg shadow-md" data-aos="fade-right" data-aos-delay="100">
   <div className="story_img w-full md:w-1/2 h-64 md:h-full">
     <img
       src={Real}
@@ -1532,7 +1532,7 @@ const Portfolio = () => {
       </span>
       Currently working with one of the in-house Product development.
     </p>
-    <p className="text-white flex items-start mb-4" data-aos="fade-left" data-aos-delay="400">
+    <p className="text-white flex items-start mb-4" data-aos="fade-left" data-aos-delay="200">
     <span className="text-white mt-1 mr-3 flex-shrink-0 text-sm md:text-base">
         <GoArrowRight />
       </span>
