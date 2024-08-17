@@ -1328,20 +1328,19 @@ const Portfolio = () => {
         </div>
       </Front>
       <div className="our_services_section">
-        <div className="our_service">
-          <h1 className="our_service_heading">
-           <b>our</b><span className="color"><b>clients</b></span>
-          </h1>
-          <p className="our_service_para">
-            A true partnership is a two-way street — ideas and information flow openly and regularly, based on a foundation of mutual trust and respect for one another’s expertise — and our clients embrace this philosophy.
-            <br />
-            The best and most productive relationships are synergistic and goal-oriented, and a long-term relationship has the value add of deep-rooted industry and company knowledge and relationships.
-            <br />
-          </p>
-        </div>
-      </div>
-
-      <div className="box-container">
+  <div className="our_service container mx-auto px-4 py-6" data-aos="fade-up">
+    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4 text-blue-600">
+      <b>our</b> <span className="text-blue-800"><b>clients</b></span>
+    </h1>
+    <p className="text-xl sm:text-lg leading-relaxed text-center text-gray-600">
+      A true partnership is a two-way street — ideas and information flow openly and regularly, based on a foundation of mutual trust and respect for one another’s expertise — and our clients embrace this philosophy.
+      <br />
+      The best and most productive relationships are synergistic and goal-oriented, and a long-term relationship has the value add of deep-rooted industry and company knowledge and relationships.
+      <br />
+    </p>
+  </div>
+</div>
+      <div className="box-container hidden sm:block">
         <Swiper
           spaceBetween={18}
           slidesPerView={4}
@@ -1353,7 +1352,7 @@ const Portfolio = () => {
           modules={[Autoplay]}
         >
           <SwiperSlide>
-            <Box
+            <Box  className="hidden sm:block"
               title="Just Click Service"
               description="Food & Groceries Delivery Services"
               icon={Loud}
@@ -1393,13 +1392,37 @@ const Portfolio = () => {
             />
           </SwiperSlide>
         </Swiper>
+        </div>
+        <div className="container mx-auto p-4 lg:hidden">
+  <div className="grid grid-cols-2 sm:grid-cols-3 gap-6" data-aos="fade-up">
+    <div className="flex items-center justify-center p-4 bg-white shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105">
+      <img src={Sustaine} alt="Client 1" className="w-full h-auto object-contain" />
+    </div>
+    <div className="flex items-center justify-center p-4 bg-white shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105">
+      <img src={Geeks} alt="Client 2" className="w-full h-auto object-contain" />
+    </div>
+    <div className="flex items-center justify-center p-4 bg-white shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105">
+      <img src={Focify} alt="Client 3" className="w-full h-auto object-contain" />
+    </div>
+    <div className="flex items-center justify-center p-4 bg-white shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105">
+      <img src={Loud} alt="Client 4" className="w-full h-auto object-contain" />
+    </div>
+    <div className="flex items-center justify-center p-4 bg-white shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105">
+      <img src={Sustaine} alt="Client 5" className="w-full h-auto object-contain" />
+    </div>
+    <div className="flex items-center justify-center p-4 bg-white shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105">
+      <img src={Focify} alt="Client 6" className="w-full h-auto object-contain" />
+    </div>
+  </div>
+</div>
         <div className="storyContainer">
-  <h1 className="service_heading" data-aos="fade-up">
-    <span className="color"><b>Our Work</b></span>
-  </h1>
-  <p className="our_service_para" data-aos="fade-up" data-aos-delay="100">
-    Our team is currently working on a mobile app redesign aimed at improving user experience and integrating new features. We're using React Native for the frontend and Node.js for the backend, with a focus on creating a more intuitive interface and incorporating AI-driven personalization. The project is progressing well, with initial wireframes completed and API integration underway. We're excited to see how these changes will enhance user engagement once the app is launched.
-  </p>
+        <h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 text-blue-600" data-aos="fade-up">
+  <span className="text-blue-800"><b>Our Work</b></span>
+</h1>
+<p className="text-xl sm:text-lg leading-relaxed text-center text-gray-600 mb-6" data-aos="fade-up" data-aos-delay="100">
+  Our team is currently working on a mobile app redesign aimed at improving user experience. We're using React Native for the frontend and Node.js for the backend. The project is progressing well, with initial wireframes completed and API integration underway.
+</p>
+
   <div className="storySection flex flex-col md:flex-row" data-aos="fade-right">
   <div className="story_img w-full md:w-1/2 h-64 md:h-auto">
     <img
@@ -1570,7 +1593,7 @@ const Portfolio = () => {
   </div>
 
 </div>
-</div>
+
     </>
   );
 };

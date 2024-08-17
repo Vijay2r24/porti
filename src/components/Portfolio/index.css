@@ -918,7 +918,7 @@ flex-direction: column;
 /* Mobile responsiveness */
   @media (max-width: 768px) {
     .box-container{
-      display: flex;
+      display: none;
       flex-direction: column;
      /* Stack boxes vertically */
     }
